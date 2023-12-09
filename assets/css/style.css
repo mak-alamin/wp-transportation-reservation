@@ -1,0 +1,475 @@
+body,
+html,
+* {
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+
+/*form styles*/
+#myot_transport_reserve #msform {
+  text-align: center;
+  position: relative;
+  margin-top: 30px;
+}
+#myot_transport_reserve #msform fieldset {
+  border: 0;
+  background-color: rgb(255, 255, 255);
+  padding: 25px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
+  position: relative;
+  padding-bottom: 110px;
+  width: 100%;
+}
+#myot_transport_reserve #msform fieldset:first-of-type{
+  padding: 0;
+  padding-bottom: 120px;
+  box-shadow: none;
+}
+.select-box {
+}
+#myot_transport_reserve ul#progressbar,
+#myot_transport_reserve ul.class-list {
+  padding: 0;
+}
+#myot_transport_reserve ul.class-list {
+  margin: 0;
+}
+/*Hide all except first fieldset*/
+#myot_transport_reserve #msform fieldset:not(:first-of-type) {
+  display: none;
+}
+
+/*buttons*/
+#myot_transport_reserve #msform .action-button,
+#myot_transport_reserve .woocommerce #payment #place_order {
+  padding: 15px 68px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  color: #fff !important;
+  border-radius: 5px;
+  font-weight: 700;
+  line-height: 22px !important;
+  cursor: pointer;
+  display: inline-block;
+  background: #a72485 !important;
+  border: 0 !important;
+  position: absolute;
+  bottom: 15px;
+}
+#myot_transport_reserve input{
+  line-height: 22px !important;
+  border: 1px solid #dddddd !important;
+}
+#myot_transport_reserve input.previous.action-button {
+  left: 25px;
+}
+#myot_transport_reserve input.next.action-button {
+  right: 25px;
+}
+/*headings*/
+#myot_transport_reserve .fs-title {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #212121;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+#myot_transport_reserve .fs-subtitle {
+  font-weight: normal;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/*progressbar*/
+#myot_transport_reserve #progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+}
+
+#myot_transport_reserve #progressbar li {
+  list-style-type: none;
+  color: #848484;
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 25%;
+  font-size: 12px;
+  text-transform: uppercase;
+  float: left;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+#myot_transport_reserve #progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 24px;
+  height: 24px;
+  line-height: 26px;
+  display: block;
+  font-size: 12px;
+  color: #fff;
+  background: #848484;
+  border-radius: 25px;
+  margin: 0 auto 10px auto;
+  position: relative;
+  z-index: 1;
+}
+
+/*progressbar connectors*/
+#myot_transport_reserve #progressbar li:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #e1e1e1;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: 0; /*put it behind the numbers*/
+}
+
+#myot_transport_reserve #progressbar li:first-child:after {
+  /*connector not needed before the first step*/
+  content: none;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#myot_transport_reserve #progressbar li.active:before,
+#myot_transport_reserve#progressbar li.active:after {
+  background: #a72485;
+  color: white;
+}
+
+#myot_transport_reserve .free-cancel {
+  background: #e9fff3;
+  padding: 5px 25px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+}
+#myot_transport_reserve .free-cancel .image {
+  width: 100px;
+}
+#myot_transport_reserve .free-cancel .text p {
+  margin: 0;
+}
+#myot_transport_reserve .free-cancel .text p:first-child {
+  margin-bottom: 10px;
+}
+#myot_transport_reserve .free-cancel p strong {
+  font-size: 20px;
+  color: #146b3e;
+}
+#myot_transport_reserve .multifrom__area {
+  background: #f1f1f1;
+}
+#myot_transport_reserve .multifrom__wrapper {
+  display: grid;
+  grid-template-columns: auto 310px;
+  max-width: 1240px;
+  margin: 0 auto;
+  gap: 50px;
+}
+#myot_transport_reserve .mulitfrom__box {
+  border-radius: 9px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+  padding: 14px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #535353;
+  margin-bottom: 30px;
+  display: inline-block;
+  width: 100%;
+}
+#myot_transport_reserve .mulitfrom__box h2 {
+  font-weight: 600;
+  width: 100%;
+  display: block;
+  font-size: 20px;
+  color: #0c0c0c;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+#myot_transport_reserve .multstep__wrapper {
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 35px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+  background-color: #fff;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 200px auto 200px;
+  text-align: left;
+}
+#myot_transport_reserve .multstep__item h2 {
+  margin: 0;
+  font-size: 24px;
+}
+#myot_transport_reserve .multstep__item h2 svg {
+  margin-right: 8px;
+}
+#myot_transport_reserve .multstep__item p {
+  margin: 0;
+}
+#myot_transport_reserve .multstep__item img {
+  width: 100%;
+}
+#myot_transport_reserve button {
+  border: 0;
+}
+#myot_transport_reserve .btn-select {
+  padding: 15px 68px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  background: #a72485;
+}
+#myot_transport_reserve .multstep__item:nth-child(2) {
+  border-right: 1px dotted #c9c9c9;
+  border-left: 1px dotted #c9c9c9;
+  padding: 0px 15px;
+}
+
+#myot_transport_reserve p.mercedes {
+  color: #ccc;
+  line-height: 19px;
+  font-size: 12px;
+}
+
+#myot_transport_reserve p.tranfer {
+  font-size: 14px;
+  font-weight: 600;
+  color: #212121;
+}
+#myot_transport_reserve .class-list li {
+  cursor: help;
+  margin-bottom: 10px;
+  color: #5a5a5a;
+  font-size: 14px;
+}
+#myot_transport_reserve .subclass {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 0;
+}
+#myot_transport_reserve ul.subclass li {
+  font-size: 16px;
+  color: #212121;
+}
+#myot_transport_reserve .subclass svg {
+  color: #a72485;
+  margin-right: 8px;
+}
+#myot_transport_reserve h2.price {
+  font-size: 38px;
+  color: #3c3c3c;
+  text-align: right;
+  font-weight: 400;
+}
+#myot_transport_reserve .outward {
+}
+
+#myot_transport_reserve .outward li {
+  font-size: 13px;
+  color: #565656;
+}
+#myot_transport_reserve .class-list span {
+  border-bottom: 1px dotted #a72485;
+  margin-left: 10px;
+  padding-bottom: 4px;
+}
+
+#myot_transport_reserve .cancel {
+  color: #34b276 !important;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#myot_transport_reserve .multstep__item:nth-child(3) {
+  text-align: right;
+}
+
+/*EXTRAS WRAPPER*/
+#myot_transport_reserve .extras-item {
+  text-align: left;
+}
+#myot_transport_reserve .extras-item textarea {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#myot_transport_reserve .extras-item label {
+  font-size: 16px;
+  font-weight: 700;
+  color: #212121;
+  display: block;
+  margin-bottom: 12px;
+  margin-top: 30px;
+}
+
+#myot_transport_reserve .extras-item .extra-input input {
+  width: 100%;
+  display: block;
+  padding: 16px 16px 16px 60px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+#myot_transport_reserve .extras-item .extra-input {
+  position: relative;
+}
+
+#myot_transport_reserve .extras-item .extra-input svg.fa-plane {
+  position: absolute;
+  top: 17px;
+  left: 16px;
+  color: #495057;
+  font-size: 16px;
+}
+
+#myot_transport_reserve .extras-item a.booster_seat {
+  text-decoration: none;
+  color: #212112;
+  border-bottom: 2px solid #212112;
+}
+#myot_transport_reserve .extras-item span {
+  color: #6c757d;
+  font-size: 15px;
+  margin-bottom: 8px !important;
+}
+
+#myot_transport_reserve .extras-item p {
+  font-size: 16px;
+  font-weight: 700;
+  color: #212121;
+  margin: 30px 0;
+}
+
+#myot_transport_reserve .extras-item textarea {
+  padding: 12px 16px;
+  height: 100px;
+  margin-top: 8px;
+}
+
+/* Step 3 - (Details)*/
+#myot_transport_reserve .extras-item.passenger-name {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 40px;
+}
+.extras-item.passenger-name > div {
+  width: 50%;
+}
+.passenger-from.select-box input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.extras-item.free-message {
+  background: #f7f7f7;
+  padding: 15px;
+  margin-top: 30px;
+}
+#myot_transport_reserve .extras-item.free-message p {
+  margin: 0;
+  font-weight: 400;
+}
+/* Step 3 - (Details) ends*/
+
+#myot_transport_reserve input[type="button"] {
+  margin-top: 40px;
+}
+
+#myot_transport_reserve .multifrom__sidebar .mulitfrom__box h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0c0c0c;
+}
+#myot_transport_reserve .multifrom__sidebar .mulitfrom__box h3{
+  font-size: 22px;
+} 
+#myot_transport_reserve .multifrom__sidebar .mulitfrom__box .transfer_subbox {
+  margin-bottom: 20px;
+}
+#myot_transport_reserve .multifrom__sidebar .mulitfrom__box .transfer_subbox p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #535353;
+  margin-bottom: 12px;
+}
+#myot_transport_reserve .multifrom__sidebar .mulitfrom__box .transfer_subbox li {
+  color: #535353;
+}
+#myot_transport_reserve .multifrom__sidebar .mulitfrom__box .transfer_subbox .tour-place {
+  font-weight: 400;
+  color: #555;
+  margin-top: 8px;
+}
+#myot_transport_reserve .multifrom__sidebar .mulitfrom__box .transfer_subbox .tour-date {
+  color: #999;
+  margin-top: 8px;
+}
+
+/* Woo Checkout */
+#myot_transport_reserve table.shop_table.woocommerce-checkout-review-order-table {
+  display: none;
+}
+#myot_transport_reserve .woocommerce-additional-fields {
+  display: none;
+}
+.woocommerce p.form-row.form-row-first, .woocommerce p.form-row.form-row-last {
+  display: inline-block;
+  margin-right: 15px;
+}
+.woocommerce .woocommerce-billing-fields p.form-row.form-row-first,
+.woocommerce .woocommerce-billing-fields p.form-row.form-row-last{
+  display: block;
+  margin-right: 0;
+}
+#myot_transport_reserve .woocommerce .col2-set{
+  width: 100%;
+  margin-right: 0;
+}
+#myot_transport_reserve .woocommerce #order_review {
+  width: 100%;
+}
+#myot_transport_reserve .woocommerce #payment #place_order{
+  position: absolute;
+  bottom: 20px;
+  right: 25px;
+}
